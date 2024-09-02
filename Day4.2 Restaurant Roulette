@@ -1,0 +1,7 @@
+import random
+
+states_of_america = ["ALICE", "BOB", "CHARLIE", "DAVID", "EMANUEL"]
+name_no = random.randint(0,4)
+selected_name = states_of_america[name_no]
+
+print(selected_name + " SHOULD BE PAYING THE BILL")
