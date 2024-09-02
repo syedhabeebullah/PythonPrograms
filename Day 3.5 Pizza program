@@ -1,0 +1,45 @@
+print("Welcome to the Python Pizza Deliveries")
+size = input("What size pizza do you want S M L: ")
+bill = 0
+
+if size == "S":
+    bill = 15
+    pepperoni = input("Do you want pepperoni Y for YES and N for NO: ")
+    extra_cheese = input("Do you want extra cheese Y for YES and N for NO: ")
+    if pepperoni == "Y":
+        if extra_cheese == "Y":
+            bill = 15+2+1
+            print(f"Your bill is {bill}")
+        else:
+            bill = 15+2
+            print(f"Your bill is {bill}")
+    else:
+        print(f"Your total bill is {bill}")
+
+if size == "M":
+    bill = 20
+    pepperoni = input("Do you want pepperoni Y for YES and N for NO: ")
+    extra_cheese = input("Do you want extra cheese Y for YES and N for NO: ")
+    if pepperoni == "Y":
+        if extra_cheese == "Y":
+            bill = 20+3+1
+            print(f"Your bill is {bill}")
+        else:
+            bill = 20+3
+            print(f"Your bill is {bill}")
+    else:
+        print(f"Your total bill is {bill}")
+
+if size == "L":
+    bill = 25
+    pepperoni = input("Do you want pepperoni Y for YES and N for NO: ")
+    extra_cheese = input("Do you want extra cheese Y for YES and N for NO: ")
+    if pepperoni == "Y":
+        if extra_cheese == "Y":
+            bill = 25+3+1
+            print(f"Your bill is {bill}")
+        else:
+            bill = 25+3
+            print(f"Your bill is {bill}")
+    else:
+        print(f"Your total bill is {bill}")
