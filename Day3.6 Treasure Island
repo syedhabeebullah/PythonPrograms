@@ -1,0 +1,17 @@
+print("Welcome to treasure Island")
+print("Your mission is to find the treasure")
+
+turn = input("You encounter a turn take LEFT of RIGHT ")
+
+if turn == "LEFT":
+    river = input("You encounter a river do you want to SWIM or WAIT ")
+    if river == "WAIT":
+        door = input("You encounter a door which door do ypu want to take RED BLUE or YELLOW ")
+        if door == "YELLOW":
+            print("Hurray you WIN!")
+        else:
+            print("GAME OVER")
+    else:
+        print("GAME OVER")
+else:
+    print("GAME OVER")
