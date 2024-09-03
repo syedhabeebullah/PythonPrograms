@@ -1,0 +1,53 @@
+import random
+import Rock
+import paper
+import scissors
+import lost
+import won
+
+# List of choices
+choices = ["Rock", "Paper", "Scissors"]
+
+# Generate a random choice for the computer
+random_list = random.randint(0, 2)
+
+# User input
+choosen = int(input("What do you choose? Type 0 for Rock, 1 for Paper, or 2 for Scissors: "))
+
+# Validate user input
+if choosen not in [0, 1, 2]:
+    print("Invalid choice. Please choose 0, 1, or 2.")
+else:
+    # Display user's choice
+    print("YOU CHOOSE:")
+    print(choices[choosen])
+
+    if choosen == 0:
+        print(Rock.rock)
+    elif choosen == 1:
+        print(paper.paper)
+    elif choosen == 2:
+        print(scissors.scissors)
+
+    # Display computer's choice
+    print("COMPUTER CHOOSES:")
+    print(choices[random_list])
+
+    if random_list == 0:
+        print(Rock.rock)
+    elif random_list == 1:
+        print(paper.paper)
+    elif random_list == 2:
+        print(scissors.scissors)
+
+    # Determine the winner
+    if choosen == random_list:
+        print("It's a tie!")
+    elif (choosen == 0 and random_list == 2) or \
+            (choosen == 1 and random_list == 0) or \
+            (choosen == 2 and random_list == 1):
+        print("YOU WON")
+        print(won.won)
+    else:
+        print("YOU LOST")
+        print(lost.lost)
