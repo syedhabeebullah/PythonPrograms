@@ -1,0 +1,16 @@
+
+def life_in_weeks(weeks_left):
+    print(f"You have {weeks_left } weeks left.")
+
+age= input("Enter your age ")
+age=int(age)
+
+total_weeks=(4*12*90)
+your_weeks=(4*12*age)
+
+weeks_left = total_weeks-your_weeks
+
+print(total_weeks)
+print(your_weeks)
+
+life_in_weeks(weeks_left)
