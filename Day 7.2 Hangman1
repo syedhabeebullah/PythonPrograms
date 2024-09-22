@@ -1,0 +1,22 @@
+import random
+word_list=["aadvaark", "camel", "baboon"]
+chosen_word=random.choice(word_list)
+dash= "_"
+output=["_" for _ in chosen_word]
+is_correct=False
+
+while '_' in output:
+    guessed_letter=input("Guess the word ").lower()
+    is_correct=False
+    for index, letter in enumerate(chosen_word):
+        if guessed_letter==letter:
+            output[index]=guessed_letter
+            is_correct=True
+    if is_correct:
+        print("YOU GUESSED RIGHT")
+    else:
+        print("YOU GUESSED WRONG")
+
+    print("Your guessed word is ", ''.join(output))
+
+print("CONGRATULATIONS YOU GUESSED THE RIGHT NAME")
