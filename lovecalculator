@@ -1,0 +1,29 @@
+def combined_name(name1,name2):
+    return name1+name2
+
+yname = input("Input the name")
+sname= input("Input your Spouse name")
+combined = combined_name(name1=yname, name2=sname)
+
+true="true"
+love="love"
+true_count = 0
+love_count=0
+
+for trueletter in true:
+    letter_count1=combined.count(trueletter)
+    true_count+=letter_count1
+    print(f"Letter '{trueletter}' appears {letter_count1} times in '{combined}'.")
+
+for loveletter in love:
+    letter_count2=combined.count(loveletter)
+    love_count+=letter_count2
+    print(f"Letter '{loveletter}' appears {letter_count2} times in '{combined}'.")
+
+
+
+
+print(f"The total number of letters matching in 'true' is: {true_count}")
+print(f"The total number of letters matching in 'love' is: {love_count}")
+
+print(f"Your love score is {true_count}{love_count}")
